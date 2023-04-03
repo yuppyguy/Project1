@@ -1,6 +1,10 @@
 var btnCount = document.getElementById('btn-count');
+var counter = document.querySelector('p');
 var num = 0;
-btnCount.onclick = function () {
+btnCount === null || btnCount === void 0 ? void 0 : btnCount.addEventListener('click', function () {
+    console.log(num);
     num = num + 1;
-    document.querySelector('p').innerText = num.toString();
-};
+    if (counter) {
+        counter.innerText = num.toString();
+    }
+});
